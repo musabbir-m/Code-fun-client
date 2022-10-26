@@ -1,7 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../../Context/UserContext';
 
 
 const Header = () => {
+  const {user}= useContext(AuthContext)
+
     return (
         <div>
           <div className="navbar bg-fuchsia-500	">
@@ -22,6 +26,9 @@ const Header = () => {
         </ul>
       </li>
       <li><a>Item 3</a></li>
+    </ul>
+    <ul>
+      <li><a>{user?.name}</a></li>
     </ul>
   </div>
 </div>
