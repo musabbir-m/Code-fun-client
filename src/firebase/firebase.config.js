@@ -5,14 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCdhsv_KURCEy-PQE1lyP3qkJmLje3w220",
-  authDomain: "auth-router-context-f9a17.firebaseapp.com",
-  projectId: "auth-router-context-f9a17",
-  storageBucket: "auth-router-context-f9a17.appspot.com",
-  messagingSenderId: "247819921507",
-  appId: "1:247819921507:web:66bc61d589ae2514b57056"
+  apiKey: "AIzaSyDN0B8M0sc4rR1Ws6C2HJVkoJan1vWMKt0",
+  authDomain: "codefun-de335.firebaseapp.com",
+  projectId: "codefun-de335",
+  storageBucket: "codefun-de335.appspot.com",
+  messagingSenderId: "388685141770",
+  appId: "1:388685141770:web:b0f33eabf15a5409a2ccf3",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 export default app;

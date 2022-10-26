@@ -1,6 +1,26 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../Context/UserContext';
 
 const Register = () => {
+const {user, signUp, googleSignIn}= useContext(AuthContext)
+const handleSubmit= (event)=>{
+    event.preventDefault()
+    const form = event.target
+    const email= form.email.value
+    const password= form.password.value 
+    const name= form.name.value
+    console.log(email, password, name);
+    signUp(email, password)
+    .then(result=>{
+        const user= result.user
+        console.log(user);
+    })
+    .catch(error=>{
+        console.error(error);
+    })
+}
+
     return (
         <div>
         <div className="hero min-h-screen bg-base-200">
@@ -9,13 +29,13 @@ const Register = () => {
               <h1 className="text-4xl font-bold">Please Register</h1>
             </div>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-              <form  className="card-body">
+              <form onSubmit={handleSubmit}  className="card-body">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Full Name</span>
                   </label>
                   <input
-                    name="username"
+                    name="name"
                     type="text"
                     placeholder="your name"
                     className="input input-bordered"
