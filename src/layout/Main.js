@@ -1,14 +1,15 @@
-import React from 'react';
-import Header from '../Pages/shared/Header/Header';
-
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../Pages/Header/Header";
+import Login from "../Pages/Login/Login";
 
 const Main = () => {
-    return (
-        <div>
-          <Header></Header>
-           <h2>Hello</h2>       
-        </div>
-    );
+  return (
+    <div>
+      <Header></Header>
+      <Outlet></Outlet>
+    </div>
+  );
 };
 
 export default Main;
