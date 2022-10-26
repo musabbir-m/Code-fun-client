@@ -4,6 +4,7 @@ import app from "../firebase/firebase.config";
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -35,6 +36,11 @@ const UserContext = ({ children }) => {
   const googleSignIn = () => {
     return signInWithPopup(auth, provider);
   };
+  //signin with github
+  const githubProvider= new GithubAuthProvider()
+  const githubSignIn= ()=>{
+    return signInWithPopup(auth, githubProvider)
+  }
 
   //current user
   useEffect(() => {
@@ -44,7 +50,7 @@ const UserContext = ({ children }) => {
     });
     return unsubscribe;
   }, []);
-  const authInfo = { user, signIn, signUp, googleSignIn };
+  const authInfo = { user, signIn, signUp, googleSignIn, githubSignIn };
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
