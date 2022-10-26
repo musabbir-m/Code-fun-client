@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/UserContext";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Register = () => {
   const { user, signUp, googleSignIn, githubSignIn } = useContext(AuthContext);
@@ -112,14 +113,14 @@ const Register = () => {
               onClick={googleSingInHandler}
               className="btn btn-success mx-auto mb-5"
             >
-              Sign in with Google
+              Sign in with Google <FaGoogle></FaGoogle>
             </button>
             <button
               onClick={githubSignInHandler}
               className="btn btn-success mx-auto mb-5"
             >
               {" "}
-              Sign in with GitHub
+              Sign in with GitHub <FaGithub></FaGithub>
             </button>
           </div>
         </div>
