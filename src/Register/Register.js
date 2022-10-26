@@ -35,6 +35,8 @@ const Register = () => {
     .catch(error=>{
         console.log(error);
     })
+
+    
   };
 
   return (
@@ -54,6 +56,17 @@ const Register = () => {
                   name="name"
                   type="text"
                   placeholder="your name"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  name="photoURL"
+                  type="text"
+                  placeholder="photo url"
                   className="input input-bordered"
                 />
               </div>
@@ -80,9 +93,9 @@ const Register = () => {
                 />
                 <label className="label">
                   <p>
-                    Already have an accout?{" "}
+                    Already have an accout?
                     <Link
-                      className="link link-hover bg-blue-100 rounded px-1"
+                      className="link link-hover bg-blue-100 rounded px-1 hover:bg-slate-400"
                       to="/login"
                     >
                       login

@@ -41,6 +41,10 @@ const UserContext = ({ children }) => {
   const githubSignIn= ()=>{
     return signInWithPopup(auth, githubProvider)
   }
+  //logout
+  const logOut= ()=>{
+    return signOut(auth)
+  }
 
   //current user
   useEffect(() => {
@@ -50,7 +54,7 @@ const UserContext = ({ children }) => {
     });
     return unsubscribe;
   }, []);
-  const authInfo = { user, signIn, signUp, googleSignIn, githubSignIn };
+  const authInfo = { user, signIn, signUp, googleSignIn, githubSignIn, logOut};
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
