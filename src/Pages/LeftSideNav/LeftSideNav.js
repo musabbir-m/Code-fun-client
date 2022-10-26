@@ -2,13 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Category from '../Category/Category';
+
 
 const LeftSideNav = () => {
     const [courses, setCourses]= useState([])
     console.log(courses);
     useEffect(()=>{
-    fetch('http://localhost:5000/courses')
+    fetch('http://localhost:5000/allcourses')
     .then(res=>res.json())
     .then(data=> setCourses(data))
  } ,[])
@@ -16,9 +16,9 @@ const LeftSideNav = () => {
         <div>
             <div>
                 {
-                    courses.map(course=> <p key={course.id}>
+                    courses.map(course=> <h4 key={course.id}>
                         <Link to={`/courses/${course.id}`}>{course.name}</Link>
-                    </p>
+                    </h4>
                         
                         )
                 }

@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Blog from "../Pages/Blog/Blog";
-import Category from "../Pages/Category/Category";
+
 import CourseDetail from "../Pages/CourseDetails/CourseDetail";
 import Courses from "../Pages/Courses/Courses";
 import Faq from "../Pages/Faq/Faq";
@@ -19,10 +19,7 @@ export const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>
       },
-      {
-        path: "/category",
-        element: <Category></Category>,
-      },
+     
       {
         path: "/register", element: <Register></Register>
       },
