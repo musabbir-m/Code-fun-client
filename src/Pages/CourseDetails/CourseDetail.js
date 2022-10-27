@@ -1,4 +1,5 @@
 import React from "react";
+import { FaUser } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -18,33 +19,33 @@ const CourseDetail = () => {
         <div>
           <div className="card-body ">
             <div>
-              <h2 className="card-title justify-center">{course.name}</h2>
-              <p>{course.description}.</p>
+              <h2 className="card-title justify-center text-4xl mb-3">{course.name}</h2>
+              <p className="text-xl">{course.description}.</p>
             </div>
 
             <div className="stats shadow">
               <div className="stat place-items-center">
-                <div className="stat-title">Downloads</div>
-                <div className="stat-value">31K</div>
+                <div className="stat-title">Starts at</div>
+                <div className="stat-value">{course.duration} </div>
                 <div className="stat-desc">
-                  From January 1st to February 1st
+                  
                 </div>
               </div>
 
               <div className="stat place-items-center">
-                <div className="stat-title">Users</div>
-                <div className="stat-value text-secondary">4,200</div>
-                <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
+                <div className="stat-title">Total enrollment</div>
+                <div className="stat-value text-secondary">{course.total_enrolled}</div>
+                <div className="stat-desc text-secondary"></div>
               </div>
 
               <div className="stat place-items-center">
-                <div className="stat-title">New Registers</div>
-                <div className="stat-value">1,200</div>
+                <div className="stat-title">Total hour</div>
+                <div className="stat-value">{course.total_hour}</div>
                 <div className="stat-desc">↘︎ 90 (14%)</div>
               </div>
             </div>
             <div className="card-actions justify-center">
-              <button className="btn btn-primary">Go Premium</button>
+             <Link to="/premium"><button className="btn btn-primary">Go Premium</button></Link> 
             </div>
           </div>
         </div>

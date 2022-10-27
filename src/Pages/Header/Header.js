@@ -14,9 +14,9 @@ const Header = () => {
     <div>
       <div className="navbar bg-blue-300	">
         <div className="flex-1">
-          <Link className="btn btn-ghost normal-case text-xl">
+          <Link to="/" className="btn btn-ghost normal-case text-xl">
             {" "}
-            <img src="/public/v920-kul-52.jpg"></img> CodeFun
+            <img src=""></img> CodeFun
           </Link>
         </div>
         <div className="flex-none">
