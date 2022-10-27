@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext";
 import { Link } from "react-router-dom";
-import { FaUserAlt } from 'react-icons/fa';
+import { FaUserAlt } from "react-icons/fa";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="navbar bg-fuchsia-500	">
+      <div className="navbar bg-blue-300	">
         <div className="flex-1">
           <Link className="btn btn-ghost normal-case text-xl">
             {" "}
@@ -31,9 +31,8 @@ const Header = () => {
               <Link to="/faq"> Faq</Link>
             </li>
             <li>
-             
               <Link>
-            {user?.userName && <p>{user.userName}</p>}
+                {user?.userName && <p>{user.userName}</p>}
                 {user?.photoURL ? (
                   <div className="tooltip" data-tip="hello">
                     <img
@@ -44,7 +43,7 @@ const Header = () => {
                   </div>
                 ) : (
                   <p className="tooltip" data-tip={user?.displayName}>
-                  <FaUserAlt></FaUserAlt>
+                    <FaUserAlt></FaUserAlt>
                   </p>
                 )}
               </Link>
