@@ -22,7 +22,7 @@ const Faq = () => {
         <div className="collapse">
           <input type="checkbox" className="peer" />
           <div className="collapse-title bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
-            Do I get 24 ours support?
+            Do I get 24 hours support?
           </div>
           <div className="collapse-content bg-primary text-primary-content peer-checked:bg-secondary peer-checked:text-secondary-content">
             <p>We provide 24 hours email support</p>

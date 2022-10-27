@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+firebase.json
+.env.local
+firebase-debug.log
 
 # testing
 /coverage

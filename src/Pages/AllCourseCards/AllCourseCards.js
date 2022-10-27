@@ -7,7 +7,7 @@ const AllCourseCards = () => {
   const [courses, setCourses] = useState([]);
   console.log(courses);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://codefun-server.vercel.app/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
@@ -33,7 +33,11 @@ const AllCourseCards = () => {
 
             <div className="card w-auto bg-base-100 shadow-xl mt-10">
               <figure>
-                <img className="w-96 h-60" src={course.thumbnail_url} alt="Shoes" />
+                <img
+                  className="w-96 h-60"
+                  src={course.thumbnail_url}
+                  alt="Shoes"
+                />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">

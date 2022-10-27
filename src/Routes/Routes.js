@@ -19,33 +19,43 @@ export const router = createBrowserRouter([
       { path: "/", element: <Home></Home> },
       {
         path: "/login",
-        element: <Login></Login>
-      },
-     
-      {
-        path: "/register", element: <Register></Register>
-      },
-      {
-        path: '/courses', element: <Courses></Courses>
-      }
-      , 
-      {
-        path: '/premium',
-        element: <PrivateRoute> <Premium></Premium> </PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/premium/${params.id}`)
-      },
-      {
-        path: "/courses/:id", element:<CourseDetail></CourseDetail>
-        , loader: ({params})=> fetch(`http://localhost:5000/courses/${params.id}`)
+        element: <Login></Login>,
       },
 
       {
-        path:'/blog', element: <Blog></Blog>
+        path: "/register",
+        element: <Register></Register>,
       },
       {
-        path: '/faq', element: <Faq></Faq>
-      }
-      
+        path: "/courses",
+        element: <Courses></Courses>,
+      },
+      {
+        path: "/checkout/:id",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Premium></Premium>{" "}
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`https://codefun-server.vercel.app/courses/${params.id}`),
+      },
+      {
+        path: "/courses/:id",
+        element: <CourseDetail></CourseDetail>,
+        loader: ({ params }) =>
+          fetch(`https://codefun-server.vercel.app/courses/${params.id}`),
+      },
+
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/faq",
+        element: <Faq></Faq>,
+      },
     ],
   },
 ]);

@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 
 const CourseDetail = () => {
   const course = useLoaderData();
-  console.log(course, "hehehe");
+  const id= course.id
+  console.log(course.id, "hehehe");
   return (
     <div>
       {/* <button> <Link to={`/courses/${course.id}`}>{course.name}</Link></button>
@@ -69,7 +70,7 @@ const CourseDetail = () => {
               </div>
             </div>
             <div className="card-actions justify-center">
-              <Link to="/premium">
+              <Link to={`/checkout/${id}`}>
                 <button className="btn btn-primary">Go Premium</button>
               </Link>
             </div>

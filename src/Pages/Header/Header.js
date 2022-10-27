@@ -12,11 +12,12 @@ const Header = () => {
 
   return (
     <div>
-      <div className="navbar bg-blue-300	">
+      <div className="navbar	">
         <div className="flex-1">
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <img className="w-10" src="logo.png" alt=""></img> 
+          <Link to="/" className="btn btn-ghost normal-case font-bold text-2xl">
             {" "}
-            <img src=""></img> CodeFun
+           <span className="text-violet-800">Code</span><span className="  ">Fun</span> 
           </Link>
         </div>
         <div className="flex-none">
