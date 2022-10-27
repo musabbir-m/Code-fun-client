@@ -23,11 +23,13 @@ const UserContext = ({ children }) => {
 
   //create user
   const signUp = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   //signin with email password
   const signIn = (email, password) => {
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -39,10 +41,12 @@ const UserContext = ({ children }) => {
   //signin with github
   const githubProvider= new GithubAuthProvider()
   const githubSignIn= ()=>{
+    setLoading(true)
     return signInWithPopup(auth, githubProvider)
   }
   //logout
   const logOut= ()=>{
+    setLoading(true)
     return signOut(auth)
   }
 
@@ -54,7 +58,7 @@ const UserContext = ({ children }) => {
     });
     return unsubscribe;
   }, []);
-  const authInfo = { user, signIn, signUp, googleSignIn, githubSignIn, logOut};
+  const authInfo = { user, signIn, signUp, googleSignIn, githubSignIn, logOut, loading};
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
