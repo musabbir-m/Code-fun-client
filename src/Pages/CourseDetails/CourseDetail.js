@@ -22,7 +22,7 @@ const CourseDetail = () => {
               <p>{course.description}.</p>
             </div>
 
-            <div className="stats shadow sm:flex flex-col">
+            <div className="stats shadow">
               <div className="stat place-items-center">
                 <div className="stat-title">Downloads</div>
                 <div className="stat-value">31K</div>
@@ -43,7 +43,7 @@ const CourseDetail = () => {
                 <div className="stat-desc">↘︎ 90 (14%)</div>
               </div>
             </div>
-            <div className="card-actions justify-center lg:justify-end">
+            <div className="card-actions justify-center">
               <button className="btn btn-primary">Go Premium</button>
             </div>
           </div>
