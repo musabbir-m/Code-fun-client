@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div
-        className="hero min-h-screen"
+        className="hero h-screen w-auto"
         style={{
           backgroundImage: `url("https://img.freepik.com/free-vector/network-mesh-wire-digital-technology-background_1017-27428.jpg?w=2000")`,
         }}
